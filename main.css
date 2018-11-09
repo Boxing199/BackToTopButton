@@ -1,0 +1,63 @@
+#button {
+	display: inline-block;
+	background-color: green;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	transition: background-color .3s, 
+	  opacity .5s, visibility .5s;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+  }
+  #button::after {
+	content: "\f077";
+	font-family: FontAwesome;
+	font-size: 30px;
+	line-height: 50px;
+	color: white;
+  }
+  #button:hover {
+	cursor: pointer;
+	background-color: darkgreen;
+  }
+  #button:active {
+	background-color: lightgreen;
+  }
+  #button.show {
+	opacity: 1;
+	visibility: visible;
+  }
+  
+  /* Styles for the content section */
+  
+  .content {
+	width: 75%;
+	margin: 0 auto;
+	padding: 40px;
+	font-size: 17px;	
+  }
+
+  .content h1,h3 {
+	color: darkolivegreen;
+	text-align: center;
+  }
+
+  .content p {
+	  text-align: justify;
+	  line-height: 1.5;
+  }
+
+  @media (max-width: 500px) {
+	.content h1 {
+		font-size: 24px;
+	  }
+
+	.content h3 {
+		font-size: 16px;
+	  }
+  }
